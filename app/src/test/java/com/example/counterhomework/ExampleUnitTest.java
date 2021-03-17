@@ -1,4 +1,4 @@
-package com.example.shopping_list;
+package com.example.counterhomework;
 
 import org.junit.Test;
 

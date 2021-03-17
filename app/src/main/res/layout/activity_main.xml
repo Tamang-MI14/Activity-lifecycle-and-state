@@ -7,54 +7,46 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/text_header_reply"
+        android:id="@+id/count_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/text_header_reply"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/text_message_reply"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:visibility="invisible"
+        android:layout_marginEnd="8dp"
+        android:text="@string/number"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_header_reply"/>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0" />
 
     <Button
-        android:id="@+id/button_main"
+        android:id="@+id/count_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginRight="16dp"
-        android:text="@string/button_main"
-        android:onClick="launchSecondActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="increment"
+        android:text="@string/count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count_textView"
+        tools:text="count" />
 
     <EditText
-        android:id="@+id/editText_main"
-        android:layout_width="0dp"
+        android:id="@+id/text_edit"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
         android:ems="10"
-        android:hint="@string/editText_main"
-        android:inputType="textLongMessage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_main"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
+        android:hint="@string/enter_text_here"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count_button"
+        tools:text="Enter text here" />
 </androidx.constraintlayout.widget.ConstraintLayout>
